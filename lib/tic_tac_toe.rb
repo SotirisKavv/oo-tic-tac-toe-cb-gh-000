@@ -47,6 +47,7 @@ class TicTacToe
     index = input_to_index(input)
     if valid_move?(index)
       move(index, current_player)
+      display_board
     else
       puts "Invalid input."
       turn
@@ -118,7 +119,6 @@ class TicTacToe
     puts "Welcome to Tic Tac Toe!"
     display_board
     until over?
-      display_board
       turn
     end
     if won?
